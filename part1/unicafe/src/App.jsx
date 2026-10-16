@@ -1,5 +1,6 @@
 import Button from './Button'
 import { useState } from 'react'
+import Statistics from './Statistics'
 
 
 const App = () => {
@@ -20,11 +21,15 @@ const App = () => {
       </div>
       <div>
         <h1>Statistics</h1>
-        <p>Good: {good}</p>
+        {/* <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
         <p>Bad: {bad}</p>
         <p>Total: {good + neutral + bad}</p>
-        <p>Average: {sum / 3}</p>
+        <p>Average: {sum / 3}</p> */}
+        <Statistics name={"Good"} value={good} />
+        <Statistics name={"Bad"} value={bad} />
+        <Statistics name={"Neutral"} value={neutral} />
+        <Statistics name={"Average"} value={(sum / 3)} />
       </div>
     </div>
   )
